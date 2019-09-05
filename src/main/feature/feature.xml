@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="${project.artifactId}">
+    <repository>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${jackson.version.core}/xml/features</repository>
+    <feature name="${project.artifactId}">
+        <!-- The jackson-module-jaxb-annotations feature depends on the jackson-databind, jackson-core and jackson-annotations features and will pull them all in -->
+        <feature>jackson-module-jaxb-annotations</feature>
+        <bundle start-level="80">wrap:mvn:com.github.relaxng/relaxngDatatype/2011.1</bundle>
+    </feature>
+</features>

@@ -38,19 +38,23 @@ Some data-binding types overridden as well (ObjectMapper sub-classed as XmlMappe
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
+      <scope>provided</scope>
     </dependency>
     <!--  JAXB annotation introspector is needed too? -->
     <dependency>
       <groupId>com.fasterxml.jackson.module</groupId>
       <artifactId>jackson-module-jaxb-annotations</artifactId>
+      <scope>provided</scope>
     </dependency>
     <!-- 20-Mar-2019, tatu: Stax-api been part of JDK since Java 6, so let's drop
         dependency as it causes issues with JDK9+ module info
@@ -146,6 +150,10 @@ Some data-binding types overridden as well (ObjectMapper sub-classed as XmlMappe
       <plugin>
 	<groupId>org.moditect</groupId>
 	<artifactId>moditect-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.karaf.tooling</groupId>
+        <artifactId>karaf-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
